@@ -1,0 +1,182 @@
+last_active_profile: N5767A_1
+profiles:
+  BK_PRECISION_1:
+    active_channel: 1
+    channels:
+      1:
+        last_i: 1.5
+        last_v: 12.0
+        max_i: 5.0
+        max_v: 36.0
+      2:
+        last_i: 2.0
+        last_v: 5.0
+        max_i: 5.0
+        max_v: 36.0
+    cmd_meas_i: :MEAS:SCAL:CURR?
+    cmd_meas_v: :MEAS:SCAL:VOLT?
+    cmd_out_off: OUTP:STAT 0
+    cmd_out_on: OUTP:STAT 1
+    cmd_query_out: OUTP:STAT?
+    cmd_select_ch: INST:NSEL {ch}
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.40
+    is_multichannel: true
+    name: 'BK Precision #1 Dual Output'
+    port: 5025
+    vendor_type: BK_PRECISION
+  BK_PRECISION_2:
+    active_channel: 1
+    channels:
+      1:
+        last_i: 1.0
+        last_v: 24.0
+        max_i: 5.0
+        max_v: 36.0
+      2:
+        last_i: 2.5
+        last_v: 12.0
+        max_i: 5.0
+        max_v: 36.0
+    cmd_meas_i: :MEAS:SCAL:CURR?
+    cmd_meas_v: :MEAS:SCAL:VOLT?
+    cmd_out_off: OUTP:STAT 0
+    cmd_out_on: OUTP:STAT 1
+    cmd_query_out: OUTP:STAT?
+    cmd_select_ch: INST:NSEL {ch}
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.41
+    is_multichannel: true
+    name: 'BK Precision #2 Dual Output'
+    port: 5025
+    vendor_type: BK_PRECISION
+  E36155A_1:
+    idn_match: E36155A
+    channel: 1
+    cmd_meas_i: MEAS:CURR?
+    cmd_meas_v: MEAS:VOLT?
+    cmd_out_off: OUTP OFF
+    cmd_out_on: OUTP ON
+    cmd_query_out: OUTP?
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.18
+    is_multichannel: false
+    last_i: 2.5
+    last_v: 12.0
+    max_i: 20.0
+    max_v: 60.0
+    name: 'KeySight E36155A #1 (60V/20A/800W)'
+    port: 5025
+    vendor_type: KEYSIGHT_ADV
+  E36155A_2:
+    idn_match: E36155A
+    channel: 1
+    cmd_meas_i: MEAS:CURR?
+    cmd_meas_v: MEAS:VOLT?
+    cmd_out_off: OUTP OFF
+    cmd_out_on: OUTP ON
+    cmd_query_out: OUTP?
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.19
+    is_multichannel: false
+    last_i: 10.0
+    last_v: 5.0
+    max_i: 20.0
+    max_v: 60.0
+    name: 'KeySight E36155A #2 (60V/20A/800W)'
+    port: 5025
+    vendor_type: KEYSIGHT_ADV
+  E36313A_1:
+    idn_match: E36313A
+    active_channel: 2
+    channels:
+      1:
+        last_i: 2.0
+        last_v: 5.0
+        max_i: 10.0
+        max_v: 6.0
+      2:
+        last_i: 1.0
+        last_v: 12.0
+        max_i: 2.0
+        max_v: 25.0
+      3:
+        last_i: 0.2
+        last_v: 24.0
+        max_i: 2.0
+        max_v: 25.0
+    cmd_meas_i: MEAS:CURR?
+    cmd_meas_v: MEAS:VOLT?
+    cmd_out_off: OUTP OFF
+    cmd_out_on: OUTP ON
+    cmd_query_out: OUTP?
+    cmd_select_ch: INST:NSEL {ch}
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.17
+    is_multichannel: true
+    name: 'KeySight E36313A #1 Triple Output'
+    port: 5025
+    vendor_type: KEYSIGHT_ADV
+  E36313A_2:
+    idn_match: E36313A
+    active_channel: 1
+    channels:
+      1:
+        last_i: 1.0
+        last_v: 3.3
+        max_i: 10.0
+        max_v: 6.0
+      2:
+        last_i: 0.8
+        last_v: 15.0
+        max_i: 2.0
+        max_v: 25.0
+      3:
+        last_i: 0.8
+        last_v: 15.0
+        max_i: 2.0
+        max_v: 25.0
+    cmd_meas_i: MEAS:CURR?
+    cmd_meas_v: MEAS:VOLT?
+    cmd_out_off: OUTP OFF
+    cmd_out_on: OUTP ON
+    cmd_query_out: OUTP?
+    cmd_select_ch: INST:NSEL {ch}
+    cmd_set_i: CURR {val}
+    cmd_set_v: VOLT {val}
+    conn_type: INSTR
+    ip: 192.168.150.31
+    is_multichannel: true
+    name: 'KeySight E36313A #2 Triple Output'
+    port: 5025
+    vendor_type: KEYSIGHT_ADV
+  N5767A_1:
+    idn_match: N5767A
+    channel: 1
+    cmd_meas_i: MEAS:CURR?
+    cmd_meas_v: MEAS:VOLT?
+    cmd_out_off: OUT 0
+    cmd_out_on: OUT 1
+    cmd_query_out: OUT?
+    cmd_set_i: ISET {val}
+    cmd_set_v: VSET {val}
+    conn_type: INSTR
+    ip: 192.168.150.17
+    is_multichannel: false
+    last_i: 3.0
+    last_v: 36.0
+    max_i: 25.0
+    max_v: 60.0
+    name: KeySight N5767A (60V/25A)
+    port: 5025
+    vendor_type: AGILENT_STD

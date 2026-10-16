@@ -1,0 +1,26 @@
+# Python cache y bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+
+# Archivos de IDE y editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos de log, temporales y datos de prueba
+*.log
+*.tmp
+dist/
+build/
+*.egg-info/
+
+# Archivos de captura o volcados de puerto serie
+*.csv
+*.raw

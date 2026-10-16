@@ -1,0 +1,38 @@
+# Perfiles de cargas electrónicas (ELoad).
+# {ch} = número de canal, {val} = nivel, {mode} = valor de mode_map. Admite formato Python, p. ej. {val:.4f}.
+# IMPORTANTE: verificar IP y comandos contra el equipo real antes de usar en producción.
+last_active_profile: EL34243A_1
+profiles:
+  EL34243A_1:
+    name: 'Keysight EL34243A Dual Load #1'
+    vendor_type: KEYSIGHT_ELOAD
+    conn_type: INSTR
+    ip: 192.168.150.50
+    port: 5025
+    is_multichannel: true
+    active_channel: 1
+    channels:
+      1: { max_v: 150.0, max_i: 60.0, max_p: 300.0, max_r: 4000.0, last_mode: CC,
+           last_levels: { CC: 0.0, CV: 0.0, CR: 100.0, CP: 0.0 } }
+      2: { max_v: 150.0, max_i: 60.0, max_p: 300.0, max_r: 4000.0, last_mode: CC,
+           last_levels: { CC: 0.0, CV: 0.0, CR: 100.0, CP: 0.0 } }
+    mode_map: { CC: CURR, CV: VOLT, CR: RES, CP: POW }
+    cmd_set_mode: "FUNC {mode},(@{ch})"
+    cmd_set_level:
+      CC: "CURR {val:.4f},(@{ch})"
+      CV: "VOLT {val:.4f},(@{ch})"
+      CR: "RES {val:.4f},(@{ch})"
+      CP: "POW {val:.4f},(@{ch})"
+    cmd_meas_v: "MEAS:VOLT? (@{ch})"
+    cmd_meas_i: "MEAS:CURR? (@{ch})"
+    cmd_out_on: "INP ON,(@{ch})"
+    cmd_out_off: "INP OFF,(@{ch})"
+    cmd_query_out: "INP? (@{ch})"
+    # Seguridad al conectar: identidad y lectura del modo/nivel programados en el equipo
+    idn_match: EL34243A
+    cmd_query_mode: "FUNC? (@{ch})"
+    cmd_query_level:
+      CC: "CURR? (@{ch})"
+      CV: "VOLT? (@{ch})"
+      CR: "RES? (@{ch})"
+      CP: "POW? (@{ch})"

@@ -1,0 +1,142 @@
+profiles:
+  BK_PRECISION_1:
+    name: 'BK Precision #1 Dual Output'
+    vendor_type: BK_PRECISION
+    conn_type: INSTR
+    ip: 192.168.150.40
+    port: 5025
+    is_multichannel: true
+    active_channel: 1
+    channels:
+      1: { max_v: 36.0, max_i: 5.0, last_v: 12.0, last_i: 1.5 }
+      2: { max_v: 36.0, max_i: 5.0, last_v: 5.0, last_i: 2.0 }
+    cmd_select_ch: "INST:NSEL {ch}"
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: ":MEAS:SCAL:VOLT?"
+    cmd_meas_i: ":MEAS:SCAL:CURR?"
+    cmd_out_on: "OUTP:STAT 1"
+    cmd_out_off: "OUTP:STAT 0"
+    cmd_query_out: "OUTP:STAT?"
+
+  BK_PRECISION_2:
+    name: 'BK Precision #2 Dual Output'
+    vendor_type: BK_PRECISION
+    conn_type: INSTR
+    ip: 192.168.150.41
+    port: 5025
+    is_multichannel: true
+    active_channel: 1
+    channels:
+      1: { max_v: 36.0, max_i: 5.0, last_v: 24.0, last_i: 1.0 }
+      2: { max_v: 36.0, max_i: 5.0, last_v: 12.0, last_i: 2.5 }
+    cmd_select_ch: "INST:NSEL {ch}"
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: ":MEAS:SCAL:VOLT?"
+    cmd_meas_i: ":MEAS:SCAL:CURR?"
+    cmd_out_on: "OUTP:STAT 1"
+    cmd_out_off: "OUTP:STAT 0"
+    cmd_query_out: "OUTP:STAT?"
+
+  E36155A_1:
+    name: 'KeySight E36155A #1 (60V/20A/800W)'
+    vendor_type: KEYSIGHT_ADV
+    conn_type: INSTR
+    ip: 192.168.150.18
+    port: 5025
+    is_multichannel: false
+    channel: 1
+    max_v: 60.0
+    max_i: 20.0
+    last_v: 12.0
+    last_i: 2.5
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: "MEAS:VOLT?"
+    cmd_meas_i: "MEAS:CURR?"
+    cmd_out_on: "OUTP ON"
+    cmd_out_off: "OUTP OFF"
+    cmd_query_out: "OUTP?"
+
+  E36155A_2:
+    name: 'KeySight E36155A #2 (60V/20A/800W)'
+    vendor_type: KEYSIGHT_ADV
+    conn_type: INSTR
+    ip: 192.168.150.19
+    port: 5025
+    is_multichannel: false
+    channel: 1
+    max_v: 60.0
+    max_i: 20.0
+    last_v: 5.0
+    last_i: 10.0
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: "MEAS:VOLT?"
+    cmd_meas_i: "MEAS:CURR?"
+    cmd_out_on: "OUTP ON"
+    cmd_out_off: "OUTP OFF"
+    cmd_query_out: "OUTP?"
+
+  E36313A_1:
+    name: 'KeySight E36313A #1 Triple Output'
+    vendor_type: KEYSIGHT_ADV
+    conn_type: INSTR
+    ip: 192.168.150.17
+    port: 5025
+    is_multichannel: true
+    active_channel: 1
+    channels:
+      1: { max_v: 6.0, max_i: 10.0, last_v: 5.0, last_i: 2.0 }
+      2: { max_v: 25.0, max_i: 2.0, last_v: 12.0, last_i: 0.5 }
+      3: { max_v: 25.0, max_i: 2.0, last_v: 24.0, last_i: 0.2 }
+    cmd_select_ch: "INST:NSEL {ch}"
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: "MEAS:VOLT?"
+    cmd_meas_i: "MEAS:CURR?"
+    cmd_out_on: "OUTP ON"
+    cmd_out_off: "OUTP OFF"
+    cmd_query_out: "OUTP?"
+
+  E36313A_2:
+    name: 'KeySight E36313A #2 Triple Output'
+    vendor_type: KEYSIGHT_ADV
+    conn_type: INSTR
+    ip: 192.168.150.31
+    port: 5025
+    is_multichannel: true
+    active_channel: 1
+    channels:
+      1: { max_v: 6.0, max_i: 10.0, last_v: 3.3, last_i: 1.0 }
+      2: { max_v: 25.0, max_i: 2.0, last_v: 15.0, last_i: 0.8 }
+      3: { max_v: 25.0, max_i: 2.0, last_v: 15.0, last_i: 0.8 }
+    cmd_select_ch: "INST:NSEL {ch}"
+    cmd_set_v: "VOLT {val}"
+    cmd_set_i: "CURR {val}"
+    cmd_meas_v: "MEAS:VOLT?"
+    cmd_meas_i: "MEAS:CURR?"
+    cmd_out_on: "OUTP ON"
+    cmd_out_off: "OUTP OFF"
+    cmd_query_out: "OUTP?"
+
+  N5767A_1:
+    name: 'KeySight N5767A (60V/25A)'
+    vendor_type: AGILENT_STD
+    conn_type: SOCKET
+    ip: 192.168.150.25
+    port: 5025
+    is_multichannel: false
+    channel: 1
+    max_v: 60.0
+    max_i: 25.0
+    last_v: 28.0
+    last_i: 15.0
+    cmd_set_v: "VSET {val}"
+    cmd_set_i: "ISET {val}"
+    cmd_meas_v: "MEAS:VOLT?"
+    cmd_meas_i: "MEAS:CURR?"
+    cmd_out_on: "OUT 1"
+    cmd_out_off: "OUT 0"
+    cmd_query_out: "OUT?"
